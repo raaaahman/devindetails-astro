@@ -23,6 +23,8 @@ const skills = {
     { name: "YarnBound" }
   ]
 }
+
+const primaryColor = "#731e80";
 ---
 
 <Layout>
@@ -43,8 +45,8 @@ const skills = {
 
     <h4>Technologies</h4>
 
-    <ul>
-      {skills.programming.map(({ name }) => (<li>{name}</li>))}
+    <ul class="skill-list">
+      {skills.programming.map(({ name }) => (<li class="skill">{name}</li>))}
     </ul>
 
     <h3>Développement Web</h3>
@@ -53,8 +55,8 @@ const skills = {
 
     <h4>Technologies</h4>
 
-    <ul>
-     {skills.webDevelopment.map(({ name }) => (<li>{name}</li>))}
+    <ul class="skill-list">
+     {skills.webDevelopment.map(({ name }) => (<li class="skill">{name}</li>))}
     </ul>
 
     <h3>Développement de Jeux Vidéos</h3>
@@ -63,8 +65,8 @@ const skills = {
 
     <h4>Technologies</h4>
 
-    <ul>
-      {skills.gameDevelopment.map(({ name }) => (<li>{name}</li>))}
+    <ul class="skill-list">
+      {skills.gameDevelopment.map(({ name }) => (<li class="skill">{name}</li>))}
     </ul>
 
   </section>
@@ -97,7 +99,7 @@ const skills = {
   </footer>
 </Layout>
 
-<style>
+<style define:vars={{primaryColor}}>
   #background {
 		position: fixed;
 		top: 0;
@@ -107,4 +109,15 @@ const skills = {
 		z-index: -1;
 		filter: blur(100px);
 	}
+
+  .skill-list {
+    padding: 0;
+    padding-left: 0.5rem;
+    list-style-type: none;
+  }
+
+  .skill {
+    color: var(--primaryColor);
+    font-weight: 700;
+  }
 </style>
