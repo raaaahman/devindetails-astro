@@ -23,8 +23,6 @@ const skills = {
     { name: "YarnBound" }
   ]
 }
-
-const primaryColor = "#731e80";
 ---
 
 <Layout>
@@ -92,14 +90,9 @@ const primaryColor = "#731e80";
 
     <p>Je travaille également comme formateur prestataire pour une école privée qui fermera ses portes en 2023.</p>
   </section>
-
-  <footer>
-    <p>Vous souhaitez travailler avec moi? Contactez-moi à l'adresse &lt;mon prénom&gt;@devindetails.fr</p>
-    <p>Construis avec <a href="https://astro.build">Astro</a></p>
-  </footer>
 </Layout>
 
-<style define:vars={{primaryColor}}>
+<style>
   #background {
 		position: fixed;
 		top: 0;
@@ -117,7 +110,7 @@ const primaryColor = "#731e80";
   }
 
   .skill {
-    color: var(--primaryColor);
+    color: var(--secondaryColor);
     font-weight: 700;
   }
 </style>
