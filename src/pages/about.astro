@@ -1,6 +1,28 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import background from "../assets/background.svg"
+
+const pageTitle = "A Propos de l'auteur | Dev In Details"
+
+const skills = {
+  programming: [
+    { name: "JavaScript" },
+    { name: "TypeScript" },
+    { name: "Vite" },
+    { name: "Vitest" }
+  ],
+  webDevelopment: [
+    { name: "React" },
+    { name: "Astro" },
+    { name: "Tailwind CSS" },
+    { name: "Playwright" }
+  ],
+  gameDevelopment: [
+    { name: "Phaser" },
+    { name: "ThreeJS" },
+    { name: "YarnBound" }
+  ]
+}
 ---
 
 <Layout>
@@ -22,10 +44,7 @@ import background from "../assets/background.svg"
     <h4>Technologies</h4>
 
     <ul>
-      <li>JavaScript</li>
-      <li>TypeScript</li>
-      <li>Vite</li>
-      <li>Vitest</li>
+      {skills.programming.map(({ name }) => (<li>{name}</li>))}
     </ul>
 
     <h3>Développement Web</h3>
@@ -35,10 +54,7 @@ import background from "../assets/background.svg"
     <h4>Technologies</h4>
 
     <ul>
-      <li>React</li>
-      <li>Astro</li>
-      <li>Tailwind CSS</li>
-      <li>Playwright</li>
+     {skills.webDevelopment.map(({ name }) => (<li>{name}</li>))}
     </ul>
 
     <h3>Développement de Jeux Vidéos</h3>
@@ -48,9 +64,7 @@ import background from "../assets/background.svg"
     <h4>Technologies</h4>
 
     <ul>
-      <li>Phaser</li>
-      <li>Three JS</li>
-      <li>YarnBound</li>
+      {skills.gameDevelopment.map(({ name }) => (<li>{name}</li>))}
     </ul>
 
   </section>
