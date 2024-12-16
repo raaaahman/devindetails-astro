@@ -1,6 +1,10 @@
 :root {
-  --primaryColor: #71c837;
-  --secondaryColor: #8800aa;
+  --primary-color: #71c837;
+  --primary-color-content: #584224;
+  --secondary-color: #8800aa;
+  --secondary-color-color: #edf9d7;
+  --neutral: #e4e4e4;
+  --neutral-content: #202020;
 }
 
 html,
@@ -10,8 +14,13 @@ body {
   height: 100%;
 
   font-family: sans-serif;
+  color: var(--neutral-content);
 }
 
 * {
   box-sizing: border-box;
+}
+
+.sr-only {
+  font-size: 0;
 }
