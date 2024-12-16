@@ -3,7 +3,7 @@ import Footer from "../components/Footer.astro";
 import Navigation from "../components/Navigation.astro"
 import "../styles/global.css";
 
-const pageTitle = "Dev In Details"
+const { title = "Dev In Details", description = "Un blog sur la programmation JavaScript." } = Astro.props
 ---
 
 <!doctype html>
@@ -13,7 +13,8 @@ const pageTitle = "Dev In Details"
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
-		<title>{pageTitle}</title>
+		<meta name="description" content={description} />
+		<title>{title}</title>
 	</head>
 	<body>
 		<Navigation />

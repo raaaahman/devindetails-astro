@@ -2,8 +2,6 @@
 import Layout from "../layouts/Layout.astro";
 import background from "../assets/background.svg"
 
-const pageTitle = "A Propos de l'auteur | Dev In Details"
-
 const skills = {
   programming: [
     { name: "JavaScript" },
@@ -25,11 +23,11 @@ const skills = {
 }
 ---
 
-<Layout>
+<Layout title="Sylvain Schellenberger | Dev In Details" description="Sylvain Schellenberger, Développeur Front-End React.js">
   <img id="background" src={background.src} alt="" fetchpriority="high" />
   <header>
     <p>Sylvain Schellenberger</p>
-    <h1>Développeur Front-End Créatif</h1>
+    <h1>Développeur Front-End React.js</h1>
     
     <p>Je construis des sites et des applications web interactives.</p>
   </header>
