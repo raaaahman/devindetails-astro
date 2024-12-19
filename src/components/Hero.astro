@@ -3,7 +3,7 @@ import logo from '../assets/devindetails.svg';
 ---
 
 <header class="hero has-text-centered">
-	<h1 class="title is-1 my-6">
+	<h1 class="title is-1">
 		<a href="https://devindetails.fr"
 		><img src={logo.src} width="44" height="50" alt="Dev In Details Homepage" /></a
 	>
@@ -14,4 +14,8 @@ import logo from '../assets/devindetails.svg';
 <style lang="scss">
 	@use "bulma/sass/layout/hero";
 	@use "bulma/sass/elements/title";
+
+	h1 {
+		margin: 8rem 0;
+	}
 </style>

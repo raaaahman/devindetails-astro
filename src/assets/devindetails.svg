@@ -2,9 +2,9 @@
 <!-- Created with Inkscape (http://www.inkscape.org/) -->
 
 <svg
-   width="66.80677mm"
-   height="74.321564mm"
-   viewBox="0 0 66.80677 74.321564"
+   width="69.394577mm"
+   height="74.624207mm"
+   viewBox="0 0 69.394577 74.624207"
    version="1.1"
    id="svg1"
    inkscape:version="1.4 (1:1.4+202410161351+e7c3feb100)"
@@ -35,8 +35,8 @@
     <inkscape:page
        x="0"
        y="0"
-       width="66.80677"
-       height="74.321564"
+       width="69.394577"
+       height="74.624207"
        id="page2"
        margin="0"
        bleed="0" />
@@ -47,7 +47,7 @@
      inkscape:label="Calque 1"
      inkscape:groupmode="layer"
      id="layer1"
-     transform="translate(-116.11629,-119.84282)">
+     transform="translate(-12.24669,-207.65438)">
     <g
        id="g9"
        transform="translate(-25.545011,-17.44692)"
@@ -178,10 +178,7 @@
              id="path3"
              style="fill:#eed7f4"
              d="M 52.988004,22.200109 52.003687,45.04694 77.932337,33.428528 Z"
-             sodipodi:nodetypes="cccc"
-             inkscape:export-filename="devindetails-logo.svg"
-             inkscape:export-xdpi="96"
-             inkscape:export-ydpi="96" />
+             sodipodi:nodetypes="cccc" />
           <g
              id="g4"
              style="fill:#892ca0">
