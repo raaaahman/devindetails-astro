@@ -2,14 +2,14 @@
 import logo from "../assets/devindetails.svg"
 ---
 
-<nav class="navbar" role="navigation" aria-label="main navigation">
+<nav id="navMenu" class="navbar is-fixed-top" role="navigation" aria-label="main navigation">
   <div class="navbar-brand">
     <a href="/" class="navbar-item">
       <img src={logo.src} width="44" height="50" alt="Logo Dev In Details" />
       <span class="title is-size-4">Dev In Details</span>
     </a>
 
-    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navMenu">
       <span aria-hidden="true"></span>
       <span aria-hidden="true"></span>
       <span aria-hidden="true"></span>
@@ -31,6 +31,10 @@ import logo from "../assets/devindetails.svg"
     </ul>
   </div>
 </nav>
+
+<script>
+  import '../scripts/burgerMenu'
+</script>
 
 <style lang="scss">
   @use "bulma/sass/components/navbar";
