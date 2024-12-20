@@ -1,0 +1,34 @@
+---
+const { data } = Astro.props
+
+const dateOptions: Intl.DateTimeFormatOptions = {
+  day: "numeric",
+  month: "long",
+  year: "numeric"
+}
+---
+
+<article class="card">
+  <div class="card-image">
+    <figure class="image is-4by3">
+      <img src={data.image.url} alt={data.image.alt} />
+    </figure>
+  </div>
+  <div class="card-content">
+    <header class="my-2 is-flex is-flex-wrap-wrap">
+      <h2 class="title is-4">{data.title}</h2>
+      <ul>
+        {data.tags.map((tag: string) => (<li class="tag mx-1">{tag}</li>))}
+      </ul>
+    </header>
+    <div class="content">
+      <p>{data.description}</p>
+      <time datetime={data.pubDate} class="is-size-7">{new Date(data.pubDate).toLocaleDateString(undefined, dateOptions)}</time>
+    </div>
+  </div>
+
+</article>
+
+<style lang="scss">
+  @use "bulma/sass/components/card";
+</style>

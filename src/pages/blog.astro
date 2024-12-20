@@ -1,13 +1,25 @@
 ---
 import Layout from "../layouts/Layout.astro"
+import BlogPost from "../components/BlogPost.astro"
+
+const allPosts = Object.values(import.meta.glob('./posts/*.{md,mdx}', { eager: true }))
 ---
 
 <Layout title="Articles et Tutoriels | Dev In Details" description="Articles de blog et tutoriels JavaScript." >
-  <h1>Articles et Tutoriels</h1>
-
-  <p>Articles de développement web les plus récents.</p>
-
-  <ul>
-    <li><a href="/posts/github-gameoff-2024-postmortem/">GitHub Game Off 2024 - Retour d'expérience</a></li>
-  </ul>
+  <header class="has-text-centered has-text-left-tablet">
+    <h1 class="title is-3 is-4-tablet">Articles et Tutoriels</h1>
+    <p class="subtitle is-6 is-4-tablet">Articles de développement web les plus récents.</p>
+  </header>  
+  <main class="grid">
+    {allPosts.map((post: any) => <a href={post.url} class="cell"><BlogPost data={post.frontmatter} /></a>)}
+  </main>
 </Layout>
+
+<style lang="scss">
+  @use "bulma/sass/grid";
+
+  header {
+    margin-top: var(--bulma-navbar-height);
+    margin-bottom: 1rem;
+  }
+</style>
