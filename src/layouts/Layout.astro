@@ -19,7 +19,7 @@ const { title = "Dev In Details", description = "Un blog sur la programmation Ja
 	<body>
 		<div id="wrapper" class="is-flex is-flex-direction-column is-align-content-stretch">
 			<Navigation />
-			<div class="container is flex-grow">
+			<div class="container is-flex-grow-1">
 				<slot />
 			</div>
 			<Footer />
@@ -32,6 +32,13 @@ const { title = "Dev In Details", description = "Un blog sur la programmation Ja
 	@use "bulma/sass/themes";
 	
 	@use "bulma/sass/layout/container";
+	@use "bulma/sass/layout/hero";
+  @use "bulma/sass/layout/footer";
+
+  @use "bulma/sass/elements/icon";
+  @use "bulma/sass/elements/content";
+  @use "bulma/sass/elements/title";
+  @use "bulma/sass/elements/tag";
 
 	@use "bulma/sass/helpers/color";
 	@use "bulma/sass/helpers/spacing";

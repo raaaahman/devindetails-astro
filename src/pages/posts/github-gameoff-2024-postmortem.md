@@ -1,6 +1,7 @@
 ---
-title: "GitHub Game Off 2024 - Retour d'expérience "
-pubDate: 2024-12-13
+layout: ../../layouts/BlogPostLayout.astro
+title: "GitHub Game Off 2024 - Retour d'expérience"
+pubDate: 2024-19-13
 description: "J'ai créé une fiction interactive avec React et YarnBound pour la GitHub Game Off 2024."
 author: Sylvain Schellenberger
 image:
@@ -9,17 +10,12 @@ image:
 tags: ["react", "javascript", "game developement"]
 ---
 
-# GitHub Game Off 2024 - Retour d'expérience
-
-Publié le: 13 Décembre 2024
-
 Le mois dernier, j'ai participé à la game jam[^1] [GitHub Game Off 2024](https://itch.io/jam/game-off-2024) lors de laquelle j'ai créé une fiction interactive sur le thème du hacking et à l'aide de React.js.
-
-![Couverture du jeu utilisée pour la game jam.](/images/hackback-githubgameoff2024-cover.png)
 
 Vous pouvez y [jouer sur itch.io](https://raaaahman.itch.io/hackback), ou lire le [code source sur GitHub](https://github.com/raaaahman/atthack).
 
 Comment  fonctionne une fiction interactive, et était-ce une bonne idée d'utiliser React pour en construire une? Je vous raconte. 
+
 ## Une fiction interactive dans une application web
 
 La GitHub Game Off est une game jam qui se déroule durant tout le mois de Novembre. Le thème imposé lors de cette game jam tenait en un seul mot: secrets.

@@ -1,0 +1,47 @@
+---
+import Layout from "./Layout.astro"
+
+const { frontmatter } = Astro.props
+
+const dateOptions: Intl.DateTimeFormatOptions = { 
+  weekday: "long",
+  year: "numeric",
+  month: "long",
+  day: "numeric"
+}
+---
+
+<Layout title={frontmatter.title} description={frontmatter.description}>
+  <header>
+    <h1 class="title is-1 my-4">{frontmatter.title}</h1>
+    <div class="flex my-2">
+      <time datetime={frontmatter.pubDate} class="is-small">
+        {new Date(frontmatter.pubDate).toLocaleDateString(undefined, dateOptions)}
+      </time>
+      {frontmatter.tags.map((tag: string) => (<span class="tag mx-1">{tag}</span>))}
+    </div>
+    
+    <img src={frontmatter.image.url} alt={frontmatter.image.alt} />
+  </header>
+  <main class="content px-2">
+    <slot />
+  </main>
+</Layout>
+
+<style>
+  header {
+    margin-top: var(--bulma-navbar-height);
+  }
+
+  header img {
+    display: block;
+    margin: 1rem auto;
+  }
+</style>
+
+<style is:global>
+  .content p img {
+    display: block;
+    margin: 1rem auto;
+  }
+</style>
