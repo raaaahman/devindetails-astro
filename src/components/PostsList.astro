@@ -1,0 +1,17 @@
+---
+import BlogPost from "./BlogPost.astro"
+
+const { posts } = Astro.props
+---
+
+<div class="fixed-grid has-1-cols has-2-cols-tablet has-3-cols-desktop">
+  <div class="grid">
+    {posts?.map((post: any) => (<a href={post.url}>
+      <BlogPost data={post.frontmatter} />
+    </a>))}
+  </div>
+</div>
+
+<style lang="scss">
+  @use "bulma/sass/grid";
+</style>

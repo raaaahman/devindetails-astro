@@ -1,0 +1,30 @@
+---
+import PostsList from "../../components/PostsList.astro";
+import Layout from "../../layouts/Layout.astro";
+import allTags from "./tags";
+
+export async function getStaticPaths() {
+  const posts = Object.values(import.meta.glob('../posts/*.{md,mdx}', { eager: true }));
+
+  return allTags.map(tag => {
+    const filteredPosts = posts?.filter((post: any) => post.frontmatter.tags?.includes(tag.params.tag));
+    Object.assign(tag.props, { posts: filteredPosts });
+    return tag;
+  });
+}
+
+const { tag } = Astro.params;
+const tagName = tag[0].toUpperCase() + tag.slice(1);
+const { description } = Astro.props;
+const { posts } = Astro.props;
+---
+
+<Layout title={tagName} description={description}>
+  <header>
+    <h1 class="title is-3">{tagName}</h1>
+    <p class="subtitle is-6">{description}</p>
+  </header>
+  <main class="mb-4">
+    <PostsList posts={posts} />
+  </main>
+</Layout>

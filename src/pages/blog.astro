@@ -1,20 +1,39 @@
 ---
 import Layout from "../layouts/Layout.astro"
-import BlogPost from "../components/BlogPost.astro"
+import allTags from "./tags/tags"
+import PostsList from "../components/PostsList.astro"
 
 const allPosts = Object.values(import.meta.glob('./posts/*.{md,mdx}', { eager: true }))
 ---
 
 <Layout title="Articles et Tutoriels | Dev In Details" description="Articles de blog et tutoriels JavaScript." >
   <header class="has-text-centered has-text-left-tablet">
-    <h1 class="title is-3 is-4-tablet">Articles et Tutoriels</h1>
-    <p class="subtitle is-6 is-4-tablet">Articles de développement web les plus récents.</p>
+    <h1 class="title is-3">Articles et Tutoriels</h1>
+    <p class="subtitle is-6">Articles de développement web les plus récents.</p>
   </header>  
-  <main class="grid">
-    {allPosts.map((post: any) => <a href={post.url} class="cell"><BlogPost data={post.frontmatter} /></a>)}
+  <main class="mb-4">
+    <section class="block">
+      <ul>
+        {allTags.map((tag => (<li>
+          <a href={"/tags/" + encodeURI(tag.params.tag)} class="tag is-link" title={tag.props.description} >{tag.params.tag}</a>
+        </li>)))}
+      </ul>
+    </section>
+    <section class="fixed-grid has-1-cols has-2-cols-tablet has-3-cols-desktop">
+      <PostsList posts={allPosts} />
+    </section>
   </main>
 </Layout>
 
 <style lang="scss">
   @use "bulma/sass/grid";
+
+  ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    flex-wrap:  wrap;
+    justify-content: flex-start;
+    gap: 0.25rem;
+  }
 </style>

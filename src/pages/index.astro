@@ -1,13 +1,18 @@
 ---
 import Hero from '../components/Hero.astro';
 import Layout from '../layouts/Layout.astro';
-
+import PostsList from '../components/PostsList.astro';
 import background from '../assets/background.svg';
+
+const posts = Object.values(import.meta.glob('./posts/*.{md,mdx}', { eager: true }));
 ---
 
 <Layout>
 	<img id="background" src={background.src} alt="" fetchpriority="high" />
 	<Hero />
+	<main class="mb-4">
+		<PostsList posts={posts} />
+	</main>
 </Layout>
 
 <style>

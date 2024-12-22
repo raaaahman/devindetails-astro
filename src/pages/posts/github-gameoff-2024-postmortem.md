@@ -7,7 +7,7 @@ author: Sylvain Schellenberger
 image:
   url: "/images/hackback-githubgameoff2024-cover.png"
   alt: "Logo de la GitHub Game Off 2024 sur fond bleu nuit."
-tags: ["react", "javascript", "game developement"]
+tags: ["react", "javascript", "game development"]
 ---
 
 Le mois dernier, j'ai participé à la game jam[^1] [GitHub Game Off 2024](https://itch.io/jam/game-off-2024) lors de laquelle j'ai créé une fiction interactive sur le thème du hacking et à l'aide de React.js.
