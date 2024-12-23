@@ -25,69 +25,70 @@ const skills = {
 
 <Layout title="Sylvain Schellenberger | Dev In Details" description="Sylvain Schellenberger, Développeur Front-End React.js">
   <img id="background" src={background.src} alt="" fetchpriority="high" />
-  <header>
-    <p>Sylvain Schellenberger</p>
-    <h1>Développeur Front-End React.js</h1>
+  <header class="container is-max-desktop">
+    <p class="title is-3">Sylvain Schellenberger</p>
+    <h1 class="subtitle is-6">Développeur Front-End React.js</h1>
     
     <p>Je construis des sites et des applications web interactives.</p>
   </header>
-
-  <section>
-    <h2>Mes compétences</h2>
-
-    <h3>Programmation JavaScript/TypeScript</h3>
-
-    <p>J'ai découvert la programmation en créant des animations avec JavaScript. Je l'utilise aujourd'hui pour toutes les tâches: front-end, back-end et les outils de développement.</p>
-
-    <h4>Technologies</h4>
-
-    <ul class="skill-list">
-      {skills.programming.map(({ name }) => (<li class="skill">{name}</li>))}
-    </ul>
-
-    <h3>Développement Web</h3>
-
-    <p>Je reste en veille sur les technologies du web: HTML, CSS, les APIs JavaScript des navigateurs. J'ai un intérêt particulier pour la génération de <strong>sites web statiques</strong>, afin d'améliorer la performance et la sécurité des sites basés sur du contenu (texte, images, musiques).</p>
-
-    <h4>Technologies</h4>
-
-    <ul class="skill-list">
-     {skills.webDevelopment.map(({ name }) => (<li class="skill">{name}</li>))}
-    </ul>
-
-    <h3>Développement de Jeux Vidéos</h3>
-
-    <p>Ma passion pour tous les médias artistiques (graphiques, sonores, interactifs) m'a amené à programmer plusieurs jeux vidéos, surtout lors de <em>game jams.</em></p>
-
-    <h4>Technologies</h4>
-
-    <ul class="skill-list">
-      {skills.gameDevelopment.map(({ name }) => (<li class="skill">{name}</li>))}
-    </ul>
-
-  </section>
-
-  <section>
-    <h2>Mon Parcours</h2>
-
-    <h3>Réorientation professionnelle</h3>
-
-    <p>Après des études en architecture interrompues, j'expérimente des techniques de conception graphiques, et mon atention se porte vers JavaScript pour l'animation de graphiques vectoriels.</p>
-
-    <p>Je me découvre alors une passion pour la programmation, et décide de rejoindre une formation courte ("bootcamp"), puis une formation en alternance.</p>
-
-    <h3>Développeur d'extensions WordPress</h3>
-
-    <p>L'entreprise qui m'a pris en alternance décide de m'embaucher, et je continue à travailler sur son extension pour WordPress: <a href="https://polylang.pro/">Polylang</a>.</p>
-
-    <p>Je m'investis alors dans la communauté <strong>open source</strong> WordPress, et participe au développement de la <a href="</strong>">fonctionnalité de notifications</a>.</p>
-
-    <h3>Développeur front-end indépendant</h3>
-
-    <p>En 2021, je choisis de me lancer en tant qu'indépendant, tournant mon attention vers le front-end et la bibliothèque React.</p>
-
-    <p>Je travaille également comme formateur prestataire pour une école privée qui fermera ses portes en 2023.</p>
-  </section>
+  <main class="container is-max-desktop content px-2 mb-4">
+    <section class="block">
+      <h2>Mes compétences</h2>
+  
+      <h3>Programmation JavaScript/TypeScript</h3>
+  
+      <p>J'ai découvert la programmation en créant des animations avec JavaScript. Je l'utilise aujourd'hui pour toutes les tâches: front-end, back-end et les outils de développement.</p>
+  
+      <h4>Technologies</h4>
+  
+      <ul>
+        {skills.programming.map(({ name }) => (<li>{name}</li>))}
+      </ul>
+  
+      <h3>Développement Web</h3>
+  
+      <p>Je reste en veille sur les technologies du web: HTML, CSS, les APIs JavaScript des navigateurs. J'ai un intérêt particulier pour la génération de <strong>sites web statiques</strong>, afin d'améliorer la performance et la sécurité des sites basés sur du contenu (texte, images, musiques).</p>
+  
+      <h4>Technologies</h4>
+  
+      <ul>
+       {skills.webDevelopment.map(({ name }) => (<li>{name}</li>))}
+      </ul>
+  
+      <h3>Développement de Jeux Vidéos</h3>
+  
+      <p>Ma passion pour tous les médias artistiques (graphiques, sonores, interactifs) m'a amené à programmer plusieurs jeux vidéos, surtout lors de <em>game jams.</em></p>
+  
+      <h4>Technologies</h4>
+  
+      <ul>
+        {skills.gameDevelopment.map(({ name }) => (<li>{name}</li>))}
+      </ul>
+  
+    </section>
+  
+    <section class="block">
+      <h2>Mon Parcours</h2>
+  
+      <h3>Réorientation professionnelle</h3>
+  
+      <p>Après des études en architecture interrompues, j'expérimente des techniques de conception graphiques, et mon atention se porte vers JavaScript pour l'animation de graphiques vectoriels.</p>
+  
+      <p>Je me découvre alors une passion pour la programmation, et décide de rejoindre une formation courte ("bootcamp"), puis une formation en alternance.</p>
+  
+      <h3>Développeur d'extensions WordPress</h3>
+  
+      <p>L'entreprise qui m'a pris en alternance décide de m'embaucher, et je continue à travailler sur son extension pour WordPress: <a href="https://polylang.pro/">Polylang</a>.</p>
+  
+      <p>Je m'investis alors dans la communauté <strong>open source</strong> WordPress, et participe au développement de la <a href="</strong>">fonctionnalité de notifications</a>.</p>
+  
+      <h3>Développeur front-end indépendant</h3>
+  
+      <p>En 2021, je choisis de me lancer en tant qu'indépendant, tournant mon attention vers le front-end et la bibliothèque React.</p>
+  
+      <p>Je travaille également comme formateur prestataire pour une école privée qui fermera ses portes en 2023.</p>
+    </section>
+  </main>
 </Layout>
 
 <style>
@@ -100,15 +101,4 @@ const skills = {
 		z-index: -1;
 		filter: blur(100px);
 	}
-
-  .skill-list {
-    padding: 0;
-    padding-left: 0.5rem;
-    list-style-type: none;
-  }
-
-  .skill {
-    color: var(--secondaryColor);
-    font-weight: 700;
-  }
 </style>

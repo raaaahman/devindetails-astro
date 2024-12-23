@@ -12,7 +12,7 @@ const dateOptions: Intl.DateTimeFormatOptions = {
 ---
 
 <Layout title={frontmatter.title} description={frontmatter.description}>
-  <header>
+  <header class="container is-max-desktop">
     <h1 class="title is-1 my-4">{frontmatter.title}</h1>
     <div class="flex my-2">
       <time datetime={frontmatter.pubDate} class="is-small">
@@ -23,7 +23,7 @@ const dateOptions: Intl.DateTimeFormatOptions = {
     
     <img src={frontmatter.image.url} alt={frontmatter.image.alt} />
   </header>
-  <main class="content px-2">
+  <main class="container is-max-desktop content px-2">
     <slot />
   </main>
 </Layout>
@@ -39,5 +39,9 @@ const dateOptions: Intl.DateTimeFormatOptions = {
   .content p img {
     display: block;
     margin: 1rem auto;
+  }
+
+  .footnotes {
+    margin-bottom: 1rem;
   }
 </style>
