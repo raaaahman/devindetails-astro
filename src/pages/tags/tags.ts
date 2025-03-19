@@ -22,4 +22,16 @@ export default [
     },
     posts: [],
   },
+  {
+    params: { tag: "vite" },
+    props: {
+      description: "Articles parlant d'outils de développement basés sur Vite.",
+    },
+  },
+  {
+    params: { tag: "node.js" },
+    props: {
+      description: "Articles parlant du développement de scripts pour node.js.",
+    },
+  },
 ];
